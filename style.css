@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 9px;
+}
+.logo {
+  width: 79%;
+}
+.logo > img {
+  width: 32%;
+}
+.container {
+  margin: 2% auto;
+  width: 50%;
+  border: 1px solid black;
+  padding: 2%;
+  position: relative;
+  /* margin: 3%; */
+}
+.receipt-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.receipt-payment {
+  margin: 2% 0px;
+  background: #0060a7;
+}
+.receipt-payment > div {
+  text-align: right;
+}
+.receipt-payment > div > h2 {
+  text-align: end;
+  color: black;
+  background-color: white;
+  display: inline-block;
+  padding: 1%;
+  margin-right: 5%;
+}
+.receipt-table {
+  display: flex;
+  align-items: flex-start;
+  margin: 3% 0%;
+  padding: 3% 0%;
+  border-bottom: 5px dotted black;
+  border-bottom-width: thin;
+}
+.agent-table-1 {
+  width: 93%;
+}
+.agent-table-1 > tbody > tr {
+  padding: 2% 0px;
+}
+/* .receipt-table>table>tbody>tr>td{
+    width: 23%;
+} */
+.table-head {
+  width: 100%;
+  border-collapse: collapse;
+}
+.table-head > thead > tr > th {
+  background: #0060a7;
+  color: white;
+}
+.table-head > thead > tr > th,
+.table-head > tbody > tr > td {
+  margin: 0px;
+  padding: 10px;
+  text-align: center;
+}
+.receipt-note {
+  padding: 30px;
+  text-align: center;
+  margin: 2% 0px;
+  border-bottom: 25px solid #0060a7;
+}
+.receipt-address {
+  text-align: center;
+  margin: 1% 0px;
+}
+
+@media only screen and (max-device-width: 480px) {
+  .container {
+    width: 90%;
+    zoom: 0.5;
+  }
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    padding: 2%;
+  }
+  .receipt-payment {
+    margin: 2% 0px;
+    background: #0060a7;
+  }
+  .container {
+    width: 100%;
+    margin: 0% auto;
+    padding: 2%;
+  }
+  .receipt-note {
+    border-bottom: 25px solid black;
+  }
+  .table-head > thead > tr > th {
+    background: #0060a7;
+    color: white;
+  }
+  .receipt-note {
+    border-bottom: 25px solid #0060a7;
+  }
+}
